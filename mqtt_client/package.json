@@ -1,0 +1,11 @@
+{
+  "name": "mqtt_client",
+  "version": "1.0.0",
+  "description": "MQTT Client für Benchmark mit ESP8266 und Arduino Uno",
+  "main": "mqtt.js",
+  "author": "Manuel Guttenberger",
+  "license": "ISC",
+  "dependencies": {
+    "mqtt": "^1.7.4"
+  }
+}
