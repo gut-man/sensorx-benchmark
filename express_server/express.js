@@ -5,7 +5,11 @@ var i = 0;
 
 app.use(bodyparser.text());
 
-app.get('/bench/esp8266', function (req, res) {
+app.get('/', function (req, res) {
+  res.send("Express running");
+});
+
+app.post('/bench/esp8266', function (req, res) {
   i++;
   console.log(i+" "+Date.now() +" "+req.body);
   //res.send("ok");
@@ -17,6 +21,6 @@ app.post('/bench/arduino', function(req,res){
   //res.send("ok");
 })
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+app.listen(63455, function () {
+  console.log('Example app listening on port 63455!');
 });
