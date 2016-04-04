@@ -10,13 +10,11 @@ app.get('/', function (req, res) {
 });
 
 app.post('/bench/esp8266', function (req, res) {
-  console.log("ESP8266 Benchmark")
   console.log(Date.now() +";"+req.body);
   //res.send("ok");
 });
 
 app.post('/bench/arduino', function(req,res){
-  console.log("Arduino Benchmark")
   console.log(Date.now() +";"+req.body);
   //res.send("ok");
 })
