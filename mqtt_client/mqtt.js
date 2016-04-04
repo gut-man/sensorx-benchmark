@@ -3,7 +3,7 @@ var  lan = 1;
 
 var mqtt    = require('mqtt');
 if(lan == 1)
-	var client  = mqtt.connect('mqtt://192.168.2.110');
+	var client  = mqtt.connect('mqtt://127.0.0.1');
 else
 	var client  = mqtt.connect('mqtt://test.mosquitto.org');
 var t_star  = "";
@@ -13,10 +13,10 @@ client.on('connect', function () {
   client.subscribe('bench/esp8266');
   //client.publish('presence', 'Hello mqtt');
 });
- 
+
 client.on('message', function (topic, message) {
-  // message is Buffer
-  console.log(Date.now() +" "+message.toString());
+  i++;
+  console.log(i+" "+Date.now() +" "+req.body);
 });
 
 
