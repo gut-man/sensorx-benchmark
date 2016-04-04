@@ -17,7 +17,7 @@ client.on('connect', function () {
 
 client.on('message', function (topic, message) {
   i++;
-  console.log(i+" "+Date.now() +" "+message);
+  console.log(i+";"+Date.now() +";"+message);
 });
 
 
