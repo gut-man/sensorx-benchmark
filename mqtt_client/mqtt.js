@@ -7,7 +7,7 @@ if(lan == 1){
 
 }
 else{
-	#var client = mqtt.connect('mqtt://test.mosquitto.org');
+	//var client = mqtt.connect('mqtt://test.mosquitto.org');
 	var client = mqtt.connect('mqtt://test.mosca.io'); 
 }
 client.on('connect', function () {
