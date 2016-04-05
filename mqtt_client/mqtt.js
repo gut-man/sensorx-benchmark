@@ -1,6 +1,6 @@
 var mqtt    = require('mqtt');
 
-var lan = 1;
+var lan = 0;
 
 if(lan == 1)
 	var client  = mqtt.connect('mqtt://127.0.0.1');
