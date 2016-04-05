@@ -2,11 +2,14 @@ var mqtt    = require('mqtt');
 
 var lan = 0;
 
-if(lan == 1)
-	var client  = mqtt.connect('mqtt://127.0.0.1');
-else
-	var client  = mqtt.connect('mqtt://test.mosquitto.org');
+if(lan == 1){
+	var client = mqtt.connect('mqtt://127.0.0.1');
 
+}
+else{
+	#var client = mqtt.connect('mqtt://test.mosquitto.org');
+	var client = mqtt.connect('mqtt://test.mosca.io'); 
+}
 client.on('connect', function () {
   client.subscribe('bench/arduino');
   client.subscribe('bench/esp8266');
